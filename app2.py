@@ -34,7 +34,7 @@ st.sidebar.header("Settings")
 
 # Add user-friendly tooltips for sliders
 st.write("### Insights")
-st.write("Open arrow to use the sliders to adjust signal properties and FFT filtering threshold.")
+st.write("Open arrow on top left to use the sliders to adjust signal properties and FFT filtering threshold.")
 st.write("SNR (Signal-to-Noise Ratio) quantifies noise reduction. Higher values indicate less noise.")
 
 # User Inputs
