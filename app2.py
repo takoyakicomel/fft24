@@ -34,7 +34,7 @@ st.sidebar.header("Settings")
 
 # Add user-friendly tooltips for sliders
 st.write("### Insights")
-st.write("Use the sliders below to adjust signal properties and FFT filtering threshold.")
+st.write("Open arrow to use the sliders to adjust signal properties and FFT filtering threshold.")
 st.write("SNR (Signal-to-Noise Ratio) quantifies noise reduction. Higher values indicate less noise.")
 
 # User Inputs
@@ -103,18 +103,3 @@ fig_fft.update_layout(title="FFT Spectrum",
                       template="plotly_dark")
 
 st.plotly_chart(fig_fft, use_container_width=True)
-
-# Download Buttons
-filtered_signal_download = np.array2string(filtered_signal, separator=',')
-fft_filtered_download = np.array2string(fft_signal_filtered, separator=',')
-
-st.download_button(label="Download Filtered Signal", 
-                   data=filtered_signal_download, 
-                   file_name="filtered_signal.txt", 
-                   mime="text/plain")
-
-st.download_button(label="Download Filtered FFT", 
-                   data=fft_filtered_download, 
-                   file_name="filtered_fft.txt", 
-                   mime="text/plain")
-
