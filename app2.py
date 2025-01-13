@@ -32,6 +32,16 @@ def calculate_snr(original_signal, noisy_signal, filtered_signal):
 st.title("Interactive Noise Reduction using FFT")
 st.sidebar.header("Settings")
 
+# Explanation of FFT
+st.write("### What is FFT?")
+st.write("""
+The **Fast Fourier Transform (FFT)** is an algorithm used to compute the Discrete Fourier Transform (DFT) and its inverse. 
+FFT transforms a signal from its original time domain into the frequency domain. This allows us to analyze the frequency 
+components of the signal, making it possible to filter out unwanted noise or extract specific frequency bands. In this app, 
+we use FFT to reduce noise from a signal by filtering out high-frequency components.
+""")
+
+
 # Add user-friendly tooltips for sliders
 st.write("### Insights")
 st.write("Open arrow on top left to use the sliders to adjust signal properties and FFT filtering threshold.")
